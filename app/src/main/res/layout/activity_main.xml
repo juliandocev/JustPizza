@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:orientation="vertical"
+        android:background="@color/grey_background">
+
+        <EditText
+            android:id="@+id/et_clientName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/et_hint_main"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:autofillHints="Enter your name"
+            android:inputType="textPersonName"
+            android:textSize="@dimen/et_size_main"
+            android:textColor="@color/black"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_margin="@dimen/rg_margin_main">
+
+            <RadioButton
+                android:id="@+id/rb_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:checked="true"
+                android:padding="@dimen/rb_cb_padding_main"
+                android:text="@string/rb_just_pizza_main"
+                android:textSize="@dimen/rb_cb_textSize_main"
+                android:textColor="@color/black"/>
+            <RadioButton
+                android:id="@+id/rb_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:checked="false"
+                android:padding="@dimen/rb_cb_padding_main"
+                android:text="@string/rb_pizza_with_main"
+
+                android:textSize="@dimen/rb_cb_textSize_main"
+                android:textColor="@color/black"/>
+
+        </RadioGroup>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_adds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tv_adds_margin_start_main"
+
+                android:textColor="@color/grey_tv_title_main"
+                android:text="@string/tv_adds_main"
+                android:textSize="@dimen/tv_title_textSize_main"
+                android:textStyle="bold"/>
+            <CheckBox
+                android:id="@+id/cbMushrooms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/rb_cb_padding_main"
+                android:layout_marginStart="@dimen/rg_margin_main"
+                android:textSize="@dimen/rb_cb_textSize_main"
+                android:text="@string/cb_mushrooms_main"/>
+            <CheckBox
+                android:id="@+id/cbCorn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/rb_cb_padding_main"
+                android:layout_marginStart="@dimen/rg_margin_main"
+                android:textSize="@dimen/rb_cb_textSize_main"
+                android:text="@string/cb_corn_main"/>
+            <CheckBox
+                android:id="@+id/cbPickles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/rb_cb_padding_main"
+                android:layout_marginStart="@dimen/rg_margin_main"
+                android:textSize="@dimen/rb_cb_textSize_main"
+                android:text="@string/cb_pickles_main"/>
+            
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_quantity_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tv_adds_margin_start_main"
+            android:layout_marginVertical="@dimen/tv_quantity_title_marginVertical_main"
+            android:textColor="@color/grey_tv_title_main"
+            android:text="@string/tv_quantity_main"
+            android:textSize="@dimen/tv_title_textSize_main"
+            android:textStyle="bold"/>
+        <LinearLayout
+            android:id="@+id/llQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ll_quantity_margin_main"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btnMinus"
+                android:layout_width="@dimen/btn_width_main"
+                android:layout_height="@dimen/btn_height_main"
+
+                android:text="@string/btn_minus_main"
+                android:textSize="@dimen/tv_quantity_text_size"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tv_quantity"
+                android:layout_width="@dimen/tv_quantity_width_main"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/tv_quantity_text_size"
+                android:textAlignment="center"
+                android:text="0"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+            <Button
+                android:id="@+id/btnPlus"
+                android:layout_width="@dimen/btn_width_main"
+                android:layout_height="@dimen/btn_height_main"
+                android:text="@string/btn_plus_main"
+                android:textSize="@dimen/tv_quantity_text_size"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvSumUpOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/tv_sumUp_margi_main"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/sumUpt_tv_main"
+            android:textAlignment="textStart"/>
+
+        <Button
+            android:id="@+id/btnOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_order_margin_main"
+            android:textSize="@dimen/btn_order_textSize_main"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="@string/btn_order_text_main"/>
+
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Just Pizza</string>
+    <string name="et_hint_main">Exmp. John Doe</string>
+    <string name="rb_just_pizza_main">Само Пица</string>
+    <string name="rb_pizza_with_main">Пица с добавки</string>
+    <string name="tv_adds_main">ДОБАВКИ</string>
+    <string name="cb_mushrooms_main">Гъби</string>
+    <string name="cb_corn_main">Царевица</string>
+    <string name="cb_pickles_main">Кисели краставички</string>
+    <string name="tv_quantity_main">КОЛИЧЕСТВО</string>
+    <string name="btn_minus_main">-</string>
+    <string name="btn_plus_main">+</string>
+    <string name="btn_order_text_main">Поръчка</string>
+</resources>

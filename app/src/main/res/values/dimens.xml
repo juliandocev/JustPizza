@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="et_size_main">16sp</dimen>
+    <dimen name="rg_margin_main">8dp</dimen>
+    <dimen name="rb_cb_padding_main">4dp</dimen>
+    <dimen name="rb_cb_textSize_main">12sp</dimen>
+    <dimen name="tv_adds_margin_start_main">16dp</dimen>
+    <dimen name="tv_quantity_text_size">20sp</dimen>
+    <dimen name="btn_width_main">40dp</dimen>
+    <dimen name="btn_height_main">50dp</dimen>
+    <dimen name="tv_quantity_title_marginVertical_main">8dp</dimen>
+    <dimen name="sumUpt_tv_main">12sp</dimen>
+    <dimen name="tv_sumUp_margi_main">16dp</dimen>
+    <dimen name="tv_quantity_width_main">40dp</dimen>
+    <dimen name="ll_quantity_margin_main">16dp</dimen>
+    <dimen name="tv_title_textSize_main">16sp</dimen>
+    <dimen name="btn_order_textSize_main">20sp</dimen>
+    <dimen name="btn_order_margin_main">16sp</dimen>
+</resources>

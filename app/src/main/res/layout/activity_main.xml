@@ -26,13 +26,14 @@
             android:textSize="@dimen/et_size_main"
             android:textColor="@color/black"/>
         <RadioGroup
+            android:id="@+id/rgPizzas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:layout_margin="@dimen/rg_margin_main">
 
             <RadioButton
-                android:id="@+id/rb_one"
+                android:id="@+id/rb_JustPizza"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
@@ -42,7 +43,7 @@
                 android:textSize="@dimen/rb_cb_textSize_main"
                 android:textColor="@color/black"/>
             <RadioButton
-                android:id="@+id/rb_two"
+                android:id="@+id/rb_PizzaWithIngredients"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
@@ -55,9 +56,11 @@
 
         </RadioGroup>
         <LinearLayout
+            android:id="@+id/llIngredients"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
             <TextView
                 android:id="@+id/tv_adds"
                 android:layout_width="match_parent"

@@ -10,5 +10,13 @@
     <string name="tv_quantity_main">КОЛИЧЕСТВО</string>
     <string name="btn_minus_main">-</string>
     <string name="btn_plus_main">+</string>
-    <string name="btn_order_text_main">Поръчка</string>
+    <string name="btn_order_text_main">Потвърди</string>
+    <string name="btn_edit_text_recapitulation">Промени</string>
+    <string name="tv_text_title_order_recapitulation">Поръчка</string>
+    <string name="tv_title_address_recapitulation">Адрес</string>
+    <string name="tv_text_title_payment_method_recapitulation">Изберете начин на плащане</string>
+    <string name="rb_text_credit_card">С кредитна карта</string>
+    <string name="btn_text_pay_recapitulation">Плащане</string>
+    <string name="et_hint_text_address">Напишете адрес за доставка</string>
+    <string name="rb_text_with_paypal">С PayPal</string>
 </resources>

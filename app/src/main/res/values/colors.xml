@@ -9,5 +9,5 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="grey_background">#E1E1E1</color>
-    <color name="grey_tv_title_main">#686868</color>
+    <color name="grey_tv_title">#686868</color>
 </resources>

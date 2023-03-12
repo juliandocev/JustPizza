@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecapitulationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/ll_margin_vertical"
+        android:orientation="vertical"
+        android:background="@color/grey_background">
+        <TextView
+            android:id="@+id/tv_title_recapitulation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Проверка, адрес и плащане"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@color/grey_tv_title"
+            android:textSize="@dimen/tv_text_size_title_recapitulation"/>
+
+
+        <LinearLayout
+            android:id="@+id/ll_recapitulation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/tv_title_order_sumup_recapitulation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/tv_text_size_title"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/tv_margin_sumup"
+                android:textColor="@color/grey_tv_title"
+                android:text="@string/tv_text_title_order_recapitulation"/>
+            <TextView
+                android:id="@+id/tv_order_sumup_recapitulation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/tv_margin_sumup"
+                android:textSize="@dimen/tv_text_size_sumup"
+                android:textColor="@color/black"
+                tools:text="sdsddfdddddddddddddddd tv_margin_sumuptv_margin_sumuptv_margin_sumuptv_margin_sumuptv_margin_sumuptv_margin_sumuptv_margin_sumuptv_margin_sumuptv_margin_sumuptv_margin_sumuptv_margin_sumuptv_margin_sumup"/>
+
+
+
+            <Button
+                android:id="@+id/btn_edit_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_margin"
+                android:textSize="@dimen/tv_text_size_title"
+                android:text="@string/btn_edit_text_recapitulation"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_personal_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_title_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/tv_margin"
+                android:textColor="@color/grey_tv_title"
+                android:textSize="@dimen/tv_text_size_title"
+                android:textStyle="bold"
+                android:text="@string/tv_title_address_recapitulation"/>
+
+            <EditText
+                android:id="@+id/et_address_recapitulation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/tv_margin"
+                android:hint="@string/et_hint_text_address"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_payment_method"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title_payment_method_recapitulation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/tv_margin"
+                android:text="@string/tv_text_title_payment_method_recapitulation"
+                android:textStyle="bold"
+                android:textSize="@dimen/tv_text_size_title"
+                android:textColor="@color/grey_tv_title"/>
+            <RadioGroup
+                android:id="@+id/rg_payment_method"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_margin="@dimen/rg_margin_main">
+                <RadioButton
+                    android:id="@+id/rb_paypal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:checked="true"
+                    android:padding="@dimen/rb_cb_padding_main"
+                    android:text="@string/rb_text_with_paypal"
+                    android:textSize="@dimen/rb_cb_text_size_main"
+                    android:textColor="@color/black"/>
+
+                <RadioButton
+                    android:id="@+id/rb_credit_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:checked="false"
+                    android:padding="@dimen/rb_cb_padding_main"
+                    android:text="@string/rb_text_credit_card"
+                    android:textSize="@dimen/rb_cb_text_size_main"
+                    android:textColor="@color/black"/>
+
+
+            </RadioGroup>
+            <LinearLayout
+                android:id="@+id/ll_credit_card_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:hint="Enter your credit card data"/>
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_margin"
+            android:text="@string/btn_text_pay_recapitulation"
+            android:textSize="@dimen/tv_text_size_title">
+
+        </Button>
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>

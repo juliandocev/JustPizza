@@ -125,18 +125,18 @@ public class RecapitulationActivity extends AppCompatActivity {
 
 
 
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(url));
-                startActivity(intent);
-
-
 //                Intent intent = new Intent();
 //                intent.setAction(Intent.ACTION_VIEW);
 //                intent.setData(Uri.parse(url));
-//                if (intent.resolveActivity(getPackageManager()) != null) {
-//                    startActivity(intent);
-//                }
+//                startActivity(intent);
+
+
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
+                if (intent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(intent);
+                }
 
             }
         });

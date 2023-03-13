@@ -158,8 +158,35 @@
 
         </Button>
 
+        <LinearLayout
+            android:id="@+id/ll_confirmation_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_title_confirmation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/tv_margin"
+                android:textColor="@color/grey_tv_title"
+                android:textSize="@dimen/tv_text_size_title"
+                android:textStyle="bold"
+                android:text="@string/tv_text_title_confirmation"/>
+
+            <Button
+                android:id="@+id/btn_confirmation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn_margin"
+                android:text="@string/btn_text_send"
+                android:textSize="@dimen/tv_text_size_title">
+
+            </Button>
+
+        </LinearLayout>
 
     </LinearLayout>
+
 
 
 

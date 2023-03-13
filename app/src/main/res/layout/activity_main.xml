@@ -21,6 +21,15 @@
             android:inputType="textPersonName"
             android:textSize="@dimen/et_size_main"
             android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/et_emailClient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/et_text_email_client_main"
+            android:autofillHints="Enter your name"
+            android:inputType="textEmailAddress"
+            android:textSize="@dimen/et_size_main"
+            android:textColor="@color/black"/>
         <RadioGroup
             android:id="@+id/rgPizzas"
             android:layout_width="match_parent"

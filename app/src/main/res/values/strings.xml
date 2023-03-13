@@ -19,4 +19,7 @@
     <string name="btn_text_pay_recapitulation">Плащане</string>
     <string name="et_hint_text_address">Напишете адрес за доставка</string>
     <string name="rb_text_with_paypal">С PayPal</string>
+    <string name="btn_text_send">Изпрати</string>
+    <string name="tv_text_title_confirmation">Потвърждение на поръчката</string>
+    <string name="et_text_email_client_main">enter your email</string>
 </resources>

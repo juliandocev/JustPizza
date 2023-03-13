@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     String orderSumUp = "";
     String ingredients = "";
     String clientName = "";
+    String clientEmail="";
     Boolean isMushrooms = false;
     Boolean isCorn = false;
     Boolean isPickles =false;
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
     CheckBox cbPickles;
     TextView tvSumUpOrder;
     EditText etClientName;
+    EditText etClientEmail;
     LinearLayout llIngredients;
 
 
@@ -65,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
             quantity = savedInstanceState.getInt("tvQuantityState");
             orderSumUp = savedInstanceState.getString("tvSumUpOrderState");
             clientName = savedInstanceState.getString("etClientNameState");
+            clientEmail = savedInstanceState.getString("etClientEmailState");
             isMushrooms = savedInstanceState.getBoolean("cbMushroomsState");
             isCorn = savedInstanceState.getBoolean("cbCornState");
             isPickles = savedInstanceState.getBoolean("cbPicklesState");
@@ -84,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
         tvQuantity.setText(String.format(Locale.getDefault(), "%d", quantity));
         tvSumUpOrder.setText(orderSumUp);
         etClientName.setText((clientName));
+        etClientEmail.setText((clientEmail));
         cbMushrooms.setChecked(isMushrooms);
         cbCorn.setChecked(isCorn);
         cbPickles.setChecked(isPickles);
@@ -96,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
         if (extras != null) {
             tvSumUpOrder.setText(extras.getString("order"));
             etClientName.setText((extras.getString("clientName")));
+            etClientEmail.setText((extras.getString("clientEmail")));
             tvQuantity.setText(extras.getString("quantity"));
             cbMushrooms.setChecked(extras.getBoolean("mushrooms"));
             cbCorn.setChecked(extras.getBoolean("corn"));
@@ -178,11 +183,12 @@ public class MainActivity extends AppCompatActivity {
 
             // Get the client's name from the View
             clientName = binding.etClientName.getText().toString();
+            clientEmail = binding.etEmailClient.getText().toString();
 
 
             // Check if the client has entered his name
-            if (clientName.matches("")){
-                Toast.makeText(MainActivity.this, "Запишете Вашето име.",
+            if (clientName.matches("") || clientEmail.matches("")){
+                Toast.makeText(MainActivity.this, "Запишете Вашето име и email.",
                 Toast.LENGTH_LONG).show();
 
 
@@ -214,6 +220,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, RecapitulationActivity.class);
                     intent.putExtra("order", orderSumUp);
                     intent.putExtra("clientName", clientName);
+                    intent.putExtra("clientEmail", clientEmail);
                     intent.putExtra("quantity",tvQuantity.getText().toString());
                     intent.putExtra("mushrooms", cbMushrooms.isChecked());
                     intent.putExtra("corn", cbCorn.isChecked());
@@ -237,6 +244,7 @@ public class MainActivity extends AppCompatActivity {
         savedInstanceState.putInt("tvQuantityState", Integer.parseInt(tvQuantity.getText().toString()));
         savedInstanceState.putString("tvSumUpOrderState", tvSumUpOrder.getText().toString());
         savedInstanceState.putString("etClientNameState", etClientName.getText().toString());
+        savedInstanceState.putString("etClientEmailState", etClientEmail.getText().toString());
         savedInstanceState.putBoolean("cbMushroomsState", cbMushrooms.isChecked());
         savedInstanceState.putBoolean("cbCornState", cbCorn.isChecked());
         savedInstanceState.putBoolean("cbPicklesState", cbPickles.isChecked());
@@ -260,6 +268,7 @@ public class MainActivity extends AppCompatActivity {
         tvSumUpOrder = binding.tvSumUpOrder;
         tvQuantity = binding.tvQuantity;
         etClientName = binding.etClientName;
+        etClientEmail = binding.etEmailClient;
     }
 
 

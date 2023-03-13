@@ -34,6 +34,7 @@ public class RecapitulationActivity extends AppCompatActivity {
     String url = "https://www.paypal.com/";
 
     String clientName;
+    String clientEmail;
     String order;
     String quantity;
     Boolean mushrooms;
@@ -69,6 +70,7 @@ public class RecapitulationActivity extends AppCompatActivity {
         if (extras != null) {
             order = extras.getString("order");
             clientName = extras.getString("clientName");
+            clientEmail = extras.getString("clientEmail");
             quantity = extras.getString("quantity");
             mushrooms = extras.getBoolean("mushrooms");
             corn = extras.getBoolean("corn");
@@ -108,6 +110,7 @@ public class RecapitulationActivity extends AppCompatActivity {
 
             intent.putExtra("order", order);
             intent.putExtra("clientName", clientName);
+            intent.putExtra("clientEmail", clientEmail);
             intent.putExtra("quantity",quantity);
             intent.putExtra("mushrooms", mushrooms);
             intent.putExtra("corn", corn);
@@ -138,6 +141,21 @@ public class RecapitulationActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
 
+            }
+        });
+
+        binding.btnEditOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{clientEmail});
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Just Pizza order for " + clientName);
+                intent.putExtra(Intent.EXTRA_TEXT, order);
+                if (intent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(intent);
+                }
             }
         });
     }

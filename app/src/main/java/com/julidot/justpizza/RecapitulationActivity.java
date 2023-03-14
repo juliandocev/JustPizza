@@ -25,23 +25,15 @@ public class RecapitulationActivity extends AppCompatActivity {
     TextView tvOrderSumUp;
     EditText etAddress;
     RadioGroup paymentMethod;
-    RadioButton rbPaypal;
-    RadioButton rbCreditCard;
+    RadioButton rbPaypal, rbCreditCard;
     LinearLayout llCreditCardForm;
 
     Boolean isPaypal = true;
     Boolean isCreditCard = false;
     String url = "https://www.paypal.com/";
 
-    String clientName;
-    String clientEmail;
-    String order;
-    String quantity;
-    Boolean mushrooms;
-    Boolean corn;
-    Boolean pickles;
-    Boolean justPizza;
-    Boolean pizzaWithIngredients;
+    String clientName, clientEmail, order, quantity;
+    Boolean mushrooms, corn, pickles, justPizza, pizzaWithIngredients;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,10 +54,7 @@ public class RecapitulationActivity extends AppCompatActivity {
         rbCreditCard = binding.rbCreditCard;
         llCreditCardForm = binding.llCreditCardForm;
 
-
         Bundle extras = getIntent().getExtras();
-
-
 
         if (extras != null) {
             order = extras.getString("order");
@@ -78,16 +67,13 @@ public class RecapitulationActivity extends AppCompatActivity {
             justPizza = extras.getBoolean("justPizza");
             pizzaWithIngredients = extras.getBoolean("pizzaWithIngredients");
 
-
             // Set the views
             tvOrderSumUp.setText(order);
             etAddress.setText(clientName);
-
         }
 
         // Set default view
         initializeViews();
-
 
         paymentMethod.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
 
@@ -119,20 +105,11 @@ public class RecapitulationActivity extends AppCompatActivity {
             intent.putExtra("pizzaWithIngredients", pizzaWithIngredients);
             startActivity(intent);
 
-
         });
 
         binding.btnPay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
-
-//                Intent intent = new Intent();
-//                intent.setAction(Intent.ACTION_VIEW);
-//                intent.setData(Uri.parse(url));
-//                startActivity(intent);
-
 
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
@@ -144,7 +121,7 @@ public class RecapitulationActivity extends AppCompatActivity {
             }
         });
 
-        binding.btnEditOrder.setOnClickListener(new View.OnClickListener() {
+        binding.btnConfirmation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -160,7 +137,6 @@ public class RecapitulationActivity extends AppCompatActivity {
         });
     }
 
-
     @Override
     public void onSaveInstanceState(@NonNull Bundle savedInstanceState) {
 
@@ -168,7 +144,6 @@ public class RecapitulationActivity extends AppCompatActivity {
         savedInstanceState.putBoolean("rbCreditCardState", rbCreditCard.isChecked());
 
         super.onSaveInstanceState(savedInstanceState);
-
     }
 
     // Initialize the default view
